@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace CluedIn.ExternalSearch.Providers.Edgar.Models
 {
@@ -47,23 +46,5 @@ namespace CluedIn.ExternalSearch.Providers.Edgar.Models
         public string Link { get; set; }
         public Author Author { get; set; }
     }
-    [XmlRoot(ElementName = "names", Namespace = "http://www.w3.org/2005/Atom")]
-    public class Names
-    {
-        [XmlElement(ElementName = "date", Namespace = "http://www.w3.org/2005/Atom")]
-        public string Date { get; set; }
-        [XmlElement(ElementName = "name", Namespace = "http://www.w3.org/2005/Atom")]
-        public string Name { get; set; }
-    }
-
-    [XmlRoot(ElementName = "formerly-names", Namespace = "http://www.w3.org/2005/Atom")]
-    public class Formerlynames
-    {
-        [XmlElement(ElementName = "names", Namespace = "http://www.w3.org/2005/Atom")]
-        public List<Names> Names { get; set; }
-        [XmlAttribute(AttributeName = "count")]
-        public string Count { get; set; }
-    }
-
 }
    
